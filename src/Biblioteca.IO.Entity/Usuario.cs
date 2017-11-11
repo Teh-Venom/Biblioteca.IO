@@ -47,8 +47,8 @@ namespace Biblioteca.IO.Entity
 
         }
 
-        #endregion
-        
+        #endregion 
+        //pronto para atribuir pessoa
 
         public override bool Valido()
         {

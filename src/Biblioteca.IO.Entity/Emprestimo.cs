@@ -6,6 +6,7 @@ namespace Biblioteca.IO.Entity
 {
     public class Emprestimo : Core.Entity<Emprestimo>
     {
+        
 
         public DateTime DataEmprestimo { get; private set; }
 
@@ -19,11 +20,49 @@ namespace Biblioteca.IO.Entity
 
 
         #region Construtores
+        public Emprestimo(DateTime dataCadastro, DateTime dataEmprestimo, DateTime dataPrevistaRetorno, DateTime dataRetorno, List<Material> materiais, Usuario usuario)
+        {
+            DataCadastro = dataCadastro;
+            DataEmprestimo = dataEmprestimo;
+            DataPrevistaRetorno = dataPrevistaRetorno;
+            DataRetorno = dataRetorno;
+            Materiais = materiais;
+            Usuario = usuario;
+        }
 
+        public Emprestimo(int id, DateTime dataCadastro, DateTime dataEmprestimo, DateTime dataPrevistaRetorno, DateTime dataRetorno, List<Material> materiais, Usuario usuario)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            DataEmprestimo = dataEmprestimo;
+            DataPrevistaRetorno = dataPrevistaRetorno;
+            DataRetorno = dataRetorno;
+            Materiais = materiais;
+            Usuario = usuario;
+        }
+
+        public Emprestimo(DateTime dataCadastro, DateTime dataEmprestimo, DateTime dataPrevistaRetorno, List<Material> materiais, Usuario usuario)
+        {
+            DataCadastro = dataCadastro;
+            DataEmprestimo = dataEmprestimo;
+            DataPrevistaRetorno = dataPrevistaRetorno;
+            Materiais = materiais;
+            Usuario = usuario;
+        }
+
+        public Emprestimo(int id, DateTime dataCadastro, DateTime dataEmprestimo, DateTime dataPrevistaRetorno, List<Material> materiais, Usuario usuario)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            DataEmprestimo = dataEmprestimo;
+            DataPrevistaRetorno = dataPrevistaRetorno;
+            Materiais = materiais;
+            Usuario = usuario;
+        }
 
 
         #endregion
-
+        //pronto com atribuir DataRetorno.
 
         public override bool Valido()
         {

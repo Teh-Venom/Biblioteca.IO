@@ -1,0 +1,35 @@
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Repository.dll
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Repository.pdb
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.Core.dll
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.dll
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\bin\Debug\FluentValidation.dll
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.pdb
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\bin\Debug\FluentValidation.xml
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.dll
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.pdb
+C:\Users\Aluno\Desktop\jilerm\Biblioteca.IO v3 - jilerm\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Repository.dll
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Repository.pdb
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.Core.dll
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.dll
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\bin\Debug\FluentValidation.dll
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.pdb
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\bin\Debug\FluentValidation.xml
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.dll
+C:\Users\Braz\Desktop\Biblioteca.IO v3\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.pdb
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.dll
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.pdb
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Repository.dll
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Repository.pdb
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.Core.dll
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.dll
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\FluentValidation.dll
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.pdb
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\FluentValidation.xml
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.CrossCutting.dll
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.CrossCutting.pdb

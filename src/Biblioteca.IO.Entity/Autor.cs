@@ -5,6 +5,7 @@ namespace Biblioteca.IO.Entity
 {
     public class Autor : Core.Entity<Autor>
     {
+        
         public string Nome { get; private set; }
 
         public string Email { get; private set; }
@@ -12,10 +13,23 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
+        public Autor(int id, DateTime dataCadastro, string nome, string email)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Email = email;
+        }
 
+        public Autor(DateTime dataCadastro, string nome, string email)
+        {
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Email = email;
+        }
 
         #endregion
-
+        //pronto
 
         public override bool Valido()
         {

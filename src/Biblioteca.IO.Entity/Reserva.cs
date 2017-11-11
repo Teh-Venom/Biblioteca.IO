@@ -38,7 +38,7 @@ namespace Biblioteca.IO.Entity
 
 
         #endregion
-
+        //pronto
 
         public override bool Valido()
         {

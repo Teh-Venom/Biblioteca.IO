@@ -12,10 +12,36 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
+        public Cidade(int id, DateTime dataCadastro, string nome, Estado estado)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Estado = estado;
+        }
 
+        public Cidade(DateTime dataCadastro, string nome, Estado estado)
+        {
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Estado = estado;
+        }
+
+        public Cidade(int id, DateTime dataCadastro, string nome)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            Nome = nome;
+        }
+
+        public Cidade(DateTime dataCadastro, string nome)
+        {
+            DataCadastro = dataCadastro;
+            Nome = nome;
+        }
 
         #endregion
-
+        //pronto com atribuir estado.
 
         public override bool Valido()
         {

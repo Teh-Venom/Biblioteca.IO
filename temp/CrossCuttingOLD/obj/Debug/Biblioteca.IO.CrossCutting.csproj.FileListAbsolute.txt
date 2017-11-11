@@ -1,0 +1,4 @@
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.CrossCutting\bin\Debug\Biblioteca.IO.CrossCutting.dll
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.CrossCutting\bin\Debug\Biblioteca.IO.CrossCutting.pdb
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.CrossCutting\obj\Debug\Biblioteca.IO.CrossCutting.dll
+C:\Users\Aluno\Desktop\V6 Biblioteca.io\src\Biblioteca.IO.CrossCutting\obj\Debug\Biblioteca.IO.CrossCutting.pdb

@@ -31,8 +31,24 @@ namespace Biblioteca.IO.Entity
             TipoTelefone = tipoTelefone;
         }
 
-        #endregion
+        public Telefone(DateTime dataCadastro, int idPessoa, string numero)
+        {
+            DataCadastro = dataCadastro;
+            IdPessoa = idPessoa;
+            Numero = numero;
+        }
 
+        public Telefone(int id, DateTime dataCadastro, int idPessoa, string numero)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            IdPessoa = idPessoa;
+            Numero = numero;
+        }
+
+
+        #endregion
+        //pronto, concluido para metodo atribuir tipotelefone
         public override bool Valido()
         {
             Validacao();

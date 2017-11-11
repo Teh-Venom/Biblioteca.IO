@@ -6,17 +6,30 @@ namespace Biblioteca.IO.Entity
 {
     public class Artigo : Core.Entity<Artigo>
     {
+        
         public string Titulo { get; private set; }
 
         public List<Autor> Autores { get; private set; }
 
 
         #region Construtores
+        public Artigo(int id, DateTime dataCadastro, string titulo, List<Autor> autores)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            Titulo = titulo;
+            Autores = autores;
+        }
 
-
+        public Artigo(DateTime dataCadastro, string titulo, List<Autor> autores)
+        {
+            DataCadastro = dataCadastro;
+            Titulo = titulo;
+            Autores = autores;
+        }
 
         #endregion
-
+        //pronto
         
         public override bool Valido()
         {

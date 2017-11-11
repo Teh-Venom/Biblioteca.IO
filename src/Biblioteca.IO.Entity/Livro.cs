@@ -39,8 +39,27 @@ namespace Biblioteca.IO.Entity
             Autores = autores;
         }
 
-        #endregion
+        public Livro(DateTime dataCadastro, string titulo, string edicao, string isbn, List<Autor> autores)
+        {
+            DataCadastro = dataCadastro;
+            Titulo = titulo;
+            Edicao = edicao;
+            Isbn = isbn;
+            Autores = autores;
+        }
 
+        public Livro(int id, DateTime dataCadastro, string titulo, string edicao, string isbn, List<Autor> autores)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            Titulo = titulo;
+            Edicao = edicao;
+            Isbn = isbn;
+            Autores = autores;
+        }
+
+        #endregion
+        //pronto com atribuir assunto e editora da classe mãe Material.
 
         public override bool Valido()
         {

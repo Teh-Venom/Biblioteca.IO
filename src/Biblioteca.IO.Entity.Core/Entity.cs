@@ -35,6 +35,11 @@ namespace Biblioteca.IO.Entity.Core
             return GetType().GetHashCode() * 999 + Id.GetHashCode();
         }
 
+        public string ToString()
+        {
+            return string.Format("Tipo: {0} - [ID: {1}]", GetType().Name, Id);
+        }
+
         public abstract bool Valido();
     }
 }

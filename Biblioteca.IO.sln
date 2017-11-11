@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1- Presentation", "1- Presentation", "{2C0D019E-41CA-4412-8EA0-7028D54E9812}"
 EndProject
@@ -13,13 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Repositories", "3.1 -
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - CrossCutting", "3.2 - CrossCutting", "{0B4C7F10-E192-4E90-ADB3-15B1813F4B97}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1.1 - Interfaces", "3.1.1 - Interfaces", "{7465C424-C9C5-4E9A-B437-CC782A4378E5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Entities", "4 - Entities", "{A1870643-C7F5-42CA-82D7-178B045617A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.IO.Entity.Core", "src\Biblioteca.IO.Entity.Core\Biblioteca.IO.Entity.Core.csproj", "{6BB42D1C-9748-4908-9A4B-E94FCB5C2B08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.IO.Entity", "src\Biblioteca.IO.Entity\Biblioteca.IO.Entity.csproj", "{8A3EFBF4-B830-4D65-A7D6-505710FCAC22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryOLD", "temp\RepositoryOLD\RepositoryOLD.csproj", "{065ADE6D-8B1A-42EC-B189-EE918FCC10C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCuttingOLD", "temp\CrossCuttingOLD\CrossCuttingOLD.csproj", "{A639343B-56FF-4A7F-A8B1-E58756FD1F28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.IO.Repository", "src\Biblioteca.IO.Repository\Biblioteca.IO.Repository.csproj", "{F30DE068-FCBB-4E70-A47C-014C61B40264}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,18 @@ Global
 		{8A3EFBF4-B830-4D65-A7D6-505710FCAC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A3EFBF4-B830-4D65-A7D6-505710FCAC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A3EFBF4-B830-4D65-A7D6-505710FCAC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{065ADE6D-8B1A-42EC-B189-EE918FCC10C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{065ADE6D-8B1A-42EC-B189-EE918FCC10C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{065ADE6D-8B1A-42EC-B189-EE918FCC10C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{065ADE6D-8B1A-42EC-B189-EE918FCC10C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A639343B-56FF-4A7F-A8B1-E58756FD1F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A639343B-56FF-4A7F-A8B1-E58756FD1F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A639343B-56FF-4A7F-A8B1-E58756FD1F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A639343B-56FF-4A7F-A8B1-E58756FD1F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30DE068-FCBB-4E70-A47C-014C61B40264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30DE068-FCBB-4E70-A47C-014C61B40264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30DE068-FCBB-4E70-A47C-014C61B40264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30DE068-FCBB-4E70-A47C-014C61B40264}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,8 +58,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5BB71E32-9486-4482-9BD7-7A5598FAC1D2} = {DB3DAA4D-9954-4FCB-B0BD-388639C4A6C0}
 		{0B4C7F10-E192-4E90-ADB3-15B1813F4B97} = {DB3DAA4D-9954-4FCB-B0BD-388639C4A6C0}
-		{7465C424-C9C5-4E9A-B437-CC782A4378E5} = {5BB71E32-9486-4482-9BD7-7A5598FAC1D2}
 		{6BB42D1C-9748-4908-9A4B-E94FCB5C2B08} = {A1870643-C7F5-42CA-82D7-178B045617A3}
 		{8A3EFBF4-B830-4D65-A7D6-505710FCAC22} = {A1870643-C7F5-42CA-82D7-178B045617A3}
+		{F30DE068-FCBB-4E70-A47C-014C61B40264} = {5BB71E32-9486-4482-9BD7-7A5598FAC1D2}
 	EndGlobalSection
 EndGlobal

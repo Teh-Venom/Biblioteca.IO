@@ -11,6 +11,8 @@ namespace Biblioteca.IO.Entity
 
         public Editora Editora { get; protected set; }
 
+        //não há construtor por ser método abstrato, somente livro/revista poderá usar esses atributos.
+        //nas classes filhas os construtores utilizam destes atributos.
 
         public abstract override bool Valido();
     }

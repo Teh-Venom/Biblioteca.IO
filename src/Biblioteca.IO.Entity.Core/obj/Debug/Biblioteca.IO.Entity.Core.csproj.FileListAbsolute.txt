@@ -1,0 +1,7 @@
+C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\Biblioteca.IO.Entity.Core.dll
+C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\FluentValidation.dll
+C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\FluentValidation.xml
+C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.csprojResolveAssemblyReference.cache
+C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.dll
+C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.pdb

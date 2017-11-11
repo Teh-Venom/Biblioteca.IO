@@ -42,8 +42,63 @@ namespace Biblioteca.IO.Entity
             Endereco = endereco;
         }
 
-        #endregion
+        public Pessoa(int id, DateTime dataCadastro, string nome, string rg, string cpf, List<Telefone> telefones)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Rg = rg;
+            Cpf = cpf;
+            Telefones = telefones;
+        }
 
+        public Pessoa(DateTime dataCadastro, string nome, string rg, string cpf, List<Telefone> telefones)
+        {
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Rg = rg;
+            Cpf = cpf;
+            Telefones = telefones;
+        }
+
+        public Pessoa(int id, DateTime dataCadastro, string nome, string rg, string cpf, Endereco endereco)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Rg = rg;
+            Cpf = cpf;
+            Endereco = endereco;
+        }
+
+        public Pessoa(DateTime dataCadastro, string nome, string rg, string cpf, Endereco endereco)
+        {
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Rg = rg;
+            Cpf = cpf;
+            Endereco = endereco;
+        }
+
+        public Pessoa(int id, DateTime dataCadastro, string nome, string rg, string cpf)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Rg = rg;
+            Cpf = cpf;
+        }
+
+        public Pessoa(DateTime dataCadastro, string nome, string rg, string cpf)
+        {
+            DataCadastro = dataCadastro;
+            Nome = nome;
+            Rg = rg;
+            Cpf = cpf;
+        }
+
+        #endregion
+        //pronto, de acordo com atribuir endereco e telefone
 
         public override bool Valido()
         {

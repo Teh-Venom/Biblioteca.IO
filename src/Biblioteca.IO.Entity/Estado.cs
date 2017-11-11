@@ -5,6 +5,7 @@ namespace Biblioteca.IO.Entity
 {
     public class Estado : Core.Entity<Estado>
     {
+        
         public string Nome { get; private set; }
 
         public string Sigla { get; private set; }
@@ -12,11 +13,24 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
+        public Estado(DateTime dataCadastro, string sigla, string nome)
+        {
+            DataCadastro = dataCadastro;
+            Sigla = sigla;
+            Nome = nome;
+        }
 
+        public Estado(int id, DateTime dataCadastro, string sigla, string nome)
+        {
+            Id = id;
+            DataCadastro = dataCadastro;
+            Sigla = sigla;
+            Nome = nome;
+        }
 
         #endregion
-
-
+        //pronto
+        
         public override bool Valido()
         {
             Validacao();
