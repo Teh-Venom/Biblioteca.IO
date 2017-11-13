@@ -79,7 +79,7 @@ namespace Biblioteca.IO.Repository
                         usuario = PreencherUsuario(reader);
                     }
                 }
-
+                
                 return usuario;
             }
             catch (UsuarioNaoEncontradoException)

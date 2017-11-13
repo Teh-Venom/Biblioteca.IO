@@ -2,7 +2,7 @@
 
 namespace Biblioteca.IO.Repository.Interfaces
 {
-    public interface ICrudInterface<T>
+    public interface ICrudRepository<T>
     {
         void Inserir(T obj);
 
