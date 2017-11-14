@@ -47,8 +47,23 @@ namespace Biblioteca.IO.Entity
 
         }
 
-        #endregion 
+        #endregion
+
         //pronto para atribuir pessoa
+
+        #region AdHoc Setter
+
+        public void AtribuirSenha(string senha)
+        {
+            if (string.IsNullOrWhiteSpace(senha)) return;
+
+            Senha = senha;
+        }
+
+        #endregion
+
+        //ATRIBUIR PESSOA AQUI!:!!!?!?!?
+
 
         public override bool Valido()
         {
@@ -69,7 +84,7 @@ namespace Biblioteca.IO.Entity
             RuleFor(x => x.DataCadastro)
                 .NotEmpty().WithErrorCode("Erro em coletar data atual! consulte o programador mais próximo.")
                 .LessThanOrEqualTo(DateTime.Now).WithErrorCode("Erro em coletar data atual!(Data futura)");
-            
+
             ValidationResult = Validate(this);
         }
     }

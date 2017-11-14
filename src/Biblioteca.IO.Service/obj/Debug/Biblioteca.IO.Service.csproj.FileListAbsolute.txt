@@ -1,0 +1,15 @@
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.csprojResolveAssemblyReference.cache
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Service.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Service.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.CrossCutting.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Entity.Core.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Entity.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Repository.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\FluentValidation.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.CrossCutting.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Entity.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Repository.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\FluentValidation.xml
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.pdb

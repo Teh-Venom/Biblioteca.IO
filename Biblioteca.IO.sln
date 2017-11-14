@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1- Presentation", "1- Presentation", "{2C0D019E-41CA-4412-8EA0-7028D54E9812}"
 EndProject
@@ -24,6 +24,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCuttingOLD", "temp\CrossCuttingOLD\CrossCuttingOLD.csproj", "{A639343B-56FF-4A7F-A8B1-E58756FD1F28}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.IO.Repository", "src\Biblioteca.IO.Repository\Biblioteca.IO.Repository.csproj", "{F30DE068-FCBB-4E70-A47C-014C61B40264}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.IO.Service", "src\Biblioteca.IO.Service\Biblioteca.IO.Service.csproj", "{766577D7-67A1-4A9E-B232-A42396A00D79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.IO.CrossCutting", "Biblioteca.IO.CrossCutting\Biblioteca.IO.CrossCutting.csproj", "{BFF767F4-F509-4B09-8F93-A0524286DB41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{F30DE068-FCBB-4E70-A47C-014C61B40264}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F30DE068-FCBB-4E70-A47C-014C61B40264}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F30DE068-FCBB-4E70-A47C-014C61B40264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766577D7-67A1-4A9E-B232-A42396A00D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766577D7-67A1-4A9E-B232-A42396A00D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766577D7-67A1-4A9E-B232-A42396A00D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766577D7-67A1-4A9E-B232-A42396A00D79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF767F4-F509-4B09-8F93-A0524286DB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF767F4-F509-4B09-8F93-A0524286DB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF767F4-F509-4B09-8F93-A0524286DB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF767F4-F509-4B09-8F93-A0524286DB41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +73,7 @@ Global
 		{6BB42D1C-9748-4908-9A4B-E94FCB5C2B08} = {A1870643-C7F5-42CA-82D7-178B045617A3}
 		{8A3EFBF4-B830-4D65-A7D6-505710FCAC22} = {A1870643-C7F5-42CA-82D7-178B045617A3}
 		{F30DE068-FCBB-4E70-A47C-014C61B40264} = {5BB71E32-9486-4482-9BD7-7A5598FAC1D2}
+		{766577D7-67A1-4A9E-B232-A42396A00D79} = {0EBF63A0-9355-496F-A7AF-A91C4F825686}
+		{BFF767F4-F509-4B09-8F93-A0524286DB41} = {0B4C7F10-E192-4E90-ADB3-15B1813F4B97}
 	EndGlobalSection
 EndGlobal

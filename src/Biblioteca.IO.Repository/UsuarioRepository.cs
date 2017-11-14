@@ -9,9 +9,9 @@ using FluentValidation.Results;
 
 namespace Biblioteca.IO.Repository
 {
-    public class UsuarioRepository : ICrudRepository<Usuario>
+    public class UsuarioRepository : IUsuarioRepository
     {
-        private const string ConnectionString = "Server=LABINF01-17;Database=Biblioteca;Trusted_Connection=True;MultipleActiveResultSets=true;";
+
 
         public void Inserir(Usuario obj) //cadastrar usuario
         {
@@ -28,7 +28,7 @@ namespace Biblioteca.IO.Repository
             throw new NotImplementedException();
         }
 
-        public bool VerificarUsuarioExistente(int id)
+        public bool VerificarUsuarioExistente(string email)
         {
             throw new NotImplementedException();
         }

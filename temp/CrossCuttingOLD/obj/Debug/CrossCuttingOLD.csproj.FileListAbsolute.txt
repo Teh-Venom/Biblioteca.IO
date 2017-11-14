@@ -1,0 +1,5 @@
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\temp\CrossCuttingOLD\bin\Debug\Biblioteca.IO.CrossCutting.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\temp\CrossCuttingOLD\bin\Debug\Biblioteca.IO.CrossCutting.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\temp\CrossCuttingOLD\obj\Debug\CrossCuttingOLD.csprojResolveAssemblyReference.cache
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\temp\CrossCuttingOLD\obj\Debug\Biblioteca.IO.CrossCutting.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\temp\CrossCuttingOLD\obj\Debug\Biblioteca.IO.CrossCutting.pdb

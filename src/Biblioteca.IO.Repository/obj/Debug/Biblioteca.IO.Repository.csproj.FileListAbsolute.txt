@@ -1,0 +1,11 @@
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Repository.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Repository.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.Core.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\bin\Debug\FluentValidation.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\bin\Debug\Biblioteca.IO.Entity.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\bin\Debug\FluentValidation.xml
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.csprojResolveAssemblyReference.cache
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.pdb

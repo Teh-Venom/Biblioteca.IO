@@ -5,3 +5,10 @@ C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entit
 C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.csprojResolveAssemblyReference.cache
 C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.dll
 C:\Users\Braz\Documents\GitHubRepositories\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\Biblioteca.IO.Entity.Core.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\FluentValidation.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\FluentValidation.xml
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.csprojResolveAssemblyReference.cache
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.dll
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.pdb
