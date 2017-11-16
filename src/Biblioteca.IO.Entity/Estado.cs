@@ -39,10 +39,18 @@ namespace Biblioteca.IO.Entity
 
         private void Validacao()
         {
-
+            RuleFor(x => x.Nome)
+                .NotEmpty().WithMessage("Nome não deve ser Vazio")
+                .Length(1, 25).WithMessage("Nome deve conter entre 1 e 25 caracteres");
+            RuleFor(x => x.Sigla)
+                .NotEmpty().WithMessage("Sigla não deve ser Vazio")
+                .Length(1, 2).WithMessage("Nome deve conter entre 1 e 2 caracteres");
             RuleFor(x => x.DataCadastro)
-                .NotEmpty().WithErrorCode("Erro em coletar data atual! consulte o programador mais próximo.")
-                .LessThanOrEqualTo(DateTime.Now).WithErrorCode("Erro em coletar data atual!(Data futura)");
+                .NotEmpty().WithMessage("Erro em coletar data atual! consulte o programador mais próximo.")
+                .LessThanOrEqualTo(DateTime.Now).WithMessage("Erro em coletar data atual!(Data futura)");
+
+            ValidationResult = Validate(this);
         }
+        //validado
     }
 }

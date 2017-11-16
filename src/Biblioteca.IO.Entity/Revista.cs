@@ -101,20 +101,20 @@ namespace Biblioteca.IO.Entity
             RuleFor(x => x.Assunto)
                 .NotEmpty().WithMessage("Assunto não pode ser vazio!")
             RuleFor(x => x.Editora)
-                .NotEmpty().WithErrorCode("Editora não pode estar vazia!");
+                .NotEmpty().WithMessage("Editora não pode estar vazia!");
             RuleFor(x => x.Titulo)
-                .NotEmpty().WithErrorCode("Titulo não pode estar vazio!")
-                .Length(1, 25).WithErrorCode("Tamanho do tituo deve estar entre 1 e 25 caracteres!");
+                .NotEmpty().WithMessage("Titulo não pode estar vazio!")
+                .Length(1, 25).WithMessage("Tamanho do tituo deve estar entre 1 e 25 caracteres!");
             RuleFor(x => x.DataCadastro)
-                .NotEmpty().WithErrorCode("Erro em coletar data atual! consulte o programador mais próximo.")
-                .LessThanOrEqualTo(DateTime.Now).WithErrorCode("Erro em coletar data atual!(Data futura)");
+                .NotEmpty().WithMessage("Erro em coletar data atual! consulte o programador mais próximo.")
+                .LessThanOrEqualTo(DateTime.Now).WithMessage("Erro em coletar data atual!(Data futura)");
 
             //validação classe filha revista
             RuleFor(y => Colecao)
-                .NotEmpty().WithErrorCode("Coleção não pode estar vazio!")
-                .Length(1, 25).WithErrorCode("Tamanho da coleção deve estar entre 1 e 25 caracteres!");
+                .NotEmpty().WithMessage("Coleção não pode estar vazio!")
+                .Length(1, 25).WithMessage("Tamanho da coleção deve estar entre 1 e 25 caracteres!");
             RuleFor(y => Artigos)
-                .NotEmpty().WithErrorCode("Deve existir pelo menos um artigo associado à revista!");
+                .NotEmpty().WithMessage("Deve existir pelo menos um artigo associado à revista!");
            
 
             ValidationResult = Validate(this);

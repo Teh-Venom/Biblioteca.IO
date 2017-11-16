@@ -75,15 +75,15 @@ namespace Biblioteca.IO.Entity
         {
             RuleFor(x => x.Email)
                 .NotEmpty().WithMessage("Email não deve ser Vazio")
-                .Length(9, 99).WithMessage("Nome deve conter entre 9 e 99 caracteres");
+                .Length(5, 150).WithMessage("Email deve conter entre 5 e 150 caracteres");
             RuleFor(x => x.Senha)
                 .NotNull().WithMessage("Senha é obrigatoria")
                 .Length(99).WithMessage("Senha deve conter 99 caracteres");
             RuleFor(x => x.Pessoa)
                 .NotNull().WithMessage("Obrigatório atribuir pessoa");
             RuleFor(x => x.DataCadastro)
-                .NotEmpty().WithErrorCode("Erro em coletar data atual! consulte o programador mais próximo.")
-                .LessThanOrEqualTo(DateTime.Now).WithErrorCode("Erro em coletar data atual!(Data futura)");
+                .NotEmpty().WithMessage("Erro em coletar data atual! consulte o programador mais próximo.")
+                .LessThanOrEqualTo(DateTime.Now).WithMessage("Erro em coletar data atual!(Data futura)");
 
             ValidationResult = Validate(this);
         }

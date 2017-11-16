@@ -36,8 +36,8 @@ namespace Biblioteca.IO.Entity
                 .NotEmpty().WithMessage("Nome não deve ser Vazio")
                 .Length(1, 15).WithMessage("Nome deve conter entre 1 e 15 caracteres");
             RuleFor(x => x.DataCadastro)
-                .NotEmpty().WithErrorCode("Erro em coletar data atual! consulte o programador mais próximo.")
-                .LessThanOrEqualTo(DateTime.Now).WithErrorCode("Erro em coletar data atual!(Data futura)");
+                .NotEmpty().WithMessage("Erro em coletar data atual! consulte o programador mais próximo.")
+                .LessThanOrEqualTo(DateTime.Now).WithMessage("Erro em coletar data atual!(Data futura)");
 
             ValidationResult = Validate(this);
         }

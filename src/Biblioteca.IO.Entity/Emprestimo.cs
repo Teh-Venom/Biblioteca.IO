@@ -72,9 +72,24 @@ namespace Biblioteca.IO.Entity
 
         private void Validacao()
         {
+            RuleFor(x => x.DataEmprestimo)
+                .NotEmpty().WithMessage("Data Emprestimo não pode estar vazia!");
+            RuleFor(x => x.DataPrevistaRetorno)
+                .NotEmpty().WithMessage("Data Prevista de Retorno não pode estar vazia!")
+                .GreaterThan(DateTime.Now).WithMessage("Data Prevista de Retorno deve ser maior que a data atual.");
+            RuleFor(x => x.DataRetorno)
+                .NotEmpty().WithMessage("Data Retorno não pode estar vazia!")
+                .GreaterThan(DataEmprestimo).WithMessage("Data Prevista de Retorno deve ser maior que a data de empréstimo.");
+            RuleFor(x => x.Materiais)
+                .NotEmpty().WithMessage("Deve ter pelo menos um material associado!");
+            RuleFor(x => x.Usuario)
+                .NotEmpty().WithMessage("Deve ter um usuário associado!");
             RuleFor(x => x.DataCadastro)
-                .NotEmpty().WithErrorCode("Erro em coletar data atual! consulte o programador mais próximo.")
-                .LessThanOrEqualTo(DateTime.Now).WithErrorCode("Erro em coletar data atual!(Data futura)");
+                .NotEmpty().WithMessage("Erro em coletar data atual! consulte o programador mais próximo.")
+                .LessThanOrEqualTo(DateTime.Now).WithMessage("Erro em coletar data atual!(Data futura)");
+
+            ValidationResult = Validate(this);
         }
+        //validado
     }
 }
