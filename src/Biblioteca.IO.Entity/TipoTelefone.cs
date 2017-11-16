@@ -38,6 +38,9 @@ namespace Biblioteca.IO.Entity
             RuleFor(x => x.DataCadastro)
                 .NotEmpty().WithErrorCode("Erro em coletar data atual! consulte o programador mais próximo.")
                 .LessThanOrEqualTo(DateTime.Now).WithErrorCode("Erro em coletar data atual!(Data futura)");
+
+            ValidationResult = Validate(this);
         }
+        //validado
     }
 }

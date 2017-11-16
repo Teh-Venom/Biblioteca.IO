@@ -108,9 +108,24 @@ namespace Biblioteca.IO.Entity
 
         private void Validacao()
         {
+            RuleFor(x => x.Nome)
+                .NotEmpty().WithErrorCode("Nome não pode estar vazio!")
+                .Length(1, 50).WithErrorCode("Nome deve conter entre 1 e 50 caracteres.");
+            RuleFor(x => x.Rg)
+                .NotEmpty().WithErrorCode("RG  não pode estar vazio!")
+                .Length(1, 14).WithErrorCode("RG deve conter entre 1 e 14 caracteres.");
+            RuleFor(x => x.Cpf)
+                .NotEmpty().WithErrorCode("CPF  não pode estar vazio!")
+                .Length(1, 15).WithErrorCode("CPF deve conter entre 1 e 15 caracteres.");
+            RuleFor(x => x.Telefones)
+                .NotEmpty().WithErrorCode("Deve haver no mínimu um telefone associado!");
+            RuleFor(x => x.Endereco)
+                .NotEmpty().WithErrorCode("Deve haver um endereço associado!");
             RuleFor(x => x.DataCadastro)
                 .NotEmpty().WithErrorCode("Erro em coletar data atual! consulte o programador mais próximo.")
                 .LessThanOrEqualTo(DateTime.Now).WithErrorCode("Erro em coletar data atual!(Data futura)");
+            ValidationResult = Validate(this);
         }
+        //validado
     }
 }

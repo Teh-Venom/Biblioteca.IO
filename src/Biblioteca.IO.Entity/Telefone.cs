@@ -49,6 +49,7 @@ namespace Biblioteca.IO.Entity
 
         #endregion
         //pronto, concluido para metodo atribuir tipotelefone
+
         public override bool Valido()
         {
             Validacao();
@@ -57,9 +58,18 @@ namespace Biblioteca.IO.Entity
 
         private void Validacao()
         {
+            RuleFor(x => x.IdPessoa)
+                .NotEmpty().WithErrorCode("Deve ser associado à ID de uma pessoa.");
+            RuleFor(x => x.Numero)
+                .NotEmpty().WithErrorCode("Numero nao pode ser vazio.")
+                .Length(1, 20).WithErrorCode("Numero deve ter entre 1 e 20 caracteres!");
+            RuleFor(x => x.TipoTelefone)
+                .NotEmpty().WithErrorCode("Tipo de telefone deve ser associado!");
             RuleFor(x => x.DataCadastro)
                 .NotEmpty().WithErrorCode("Erro em coletar data atual! consulte o programador mais próximo.")
                 .LessThanOrEqualTo(DateTime.Now).WithErrorCode("Erro em coletar data atual!(Data futura)");
+            ValidationResult = Validate(this);
         }
+        //validado
     }
 }

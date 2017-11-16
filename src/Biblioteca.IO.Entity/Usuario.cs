@@ -87,5 +87,6 @@ namespace Biblioteca.IO.Entity
 
             ValidationResult = Validate(this);
         }
+        //validado
     }
 }
