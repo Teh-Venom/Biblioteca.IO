@@ -66,6 +66,18 @@ namespace Biblioteca.IO.Entity
         #endregion
         //pronto com atribuir cidade.
 
+        #region AdHoc Setter
+
+        public void AtribuirCidade(Cidade cidade)
+        {
+            if (cidade.Id.Equals(null)) return;
+
+            Cidade = cidade;
+        }
+
+        #endregion
+        //terminado métodos classe entity
+
         public override bool Valido()
         {
             Validacao();

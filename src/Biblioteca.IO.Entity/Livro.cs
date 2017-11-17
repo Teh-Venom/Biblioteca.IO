@@ -61,6 +61,40 @@ namespace Biblioteca.IO.Entity
         #endregion
         //pronto com atribuir assunto e editora da classe mãe Material.
 
+        #region AdHoc Setter
+
+        public void AtribuirArtigo(Autor autores)
+        {
+            if (autores.Id.Equals(null)) return;
+            Autores.Add(autores);
+        }
+
+        public void AtribuirListaArtigo(List<Autor> autores)
+        {
+            if (autores.Equals(null)) return;
+            foreach (var x in autores)
+            {
+                Autores.Add(x);
+            }
+        }
+
+        public override void AtribuirAssunto(Assunto assunto)
+        {
+            if (assunto.Id.Equals(null)) return;
+            Assunto = assunto;
+        }
+
+        public override void AtribuirEditora(Editora editora)
+        {
+            if (editora.Id.Equals(null)) return;
+            Editora = editora;
+        }
+
+
+        #endregion
+        //terminado métodos classe entity
+
+        #region Validacao
         public override bool Valido()
         {
             Validacao();
@@ -94,5 +128,6 @@ namespace Biblioteca.IO.Entity
             ValidationResult = Validate(this);
         }
         //validado
+        #endregion
     }
 }

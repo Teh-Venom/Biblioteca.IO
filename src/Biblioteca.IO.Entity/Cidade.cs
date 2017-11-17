@@ -43,6 +43,18 @@ namespace Biblioteca.IO.Entity
         #endregion
         //pronto com atribuir estado.
 
+        #region AdHoc Setter
+
+        public void AtribuirEstado(Estado estado)
+        {
+            if (estado.Id.Equals(null)) return;
+
+            Estado = estado;
+        }
+
+        #endregion
+        //terminaod métodos classe entity
+
         public override bool Valido()
         {
             Validacao();

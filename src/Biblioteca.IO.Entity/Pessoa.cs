@@ -100,6 +100,32 @@ namespace Biblioteca.IO.Entity
         #endregion
         //pronto, de acordo com atribuir endereco e telefone
 
+        #region AdHoc Setter
+
+        public void AtribuirTelefones(Telefone telefones)
+        {
+            if (telefones.Id.Equals(null)) return;
+            Telefones.Add(telefones);
+        }
+
+        public void AtribuirListaArtigo(List<Telefone> telefones)
+        {
+            if (telefones.Equals(null)) return;
+            foreach (var x in telefones)
+            {
+                Telefones.Add(x);
+            }
+        }
+
+        public void AtribuirEndereco(Endereco endereco)
+        {
+            if (endereco.Id.Equals(null)) return;
+            Endereco = endereco;
+        }
+
+        #endregion
+        //terminado métodos para classe entity
+
         public override bool Valido()
         {
             Validacao();

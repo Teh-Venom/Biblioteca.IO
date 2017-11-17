@@ -49,7 +49,6 @@ namespace Biblioteca.IO.Entity
 
         #endregion
 
-        //pronto para atribuir pessoa
 
         #region AdHoc Setter
 
@@ -60,9 +59,16 @@ namespace Biblioteca.IO.Entity
             Senha = senha;
         }
 
+        public void AtribuirPessoa(Pessoa pessoa)
+        {
+            if (Pessoa.Id.Equals(null)) return;
+
+            Pessoa = pessoa;
+        }
+
         #endregion
 
-        //ATRIBUIR PESSOA AQUI!:!!!?!?!?
+        //Terminado métodos da classe entity.
 
 
         public override bool Valido()

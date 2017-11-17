@@ -89,12 +89,48 @@ namespace Biblioteca.IO.Entity
         #endregion
         //pronto para atribuir artigo (assunto e editora fazendo parte do atribuir da classe material), não tem esse metodo no diagrama de classe
         //mas faz sentido, pois não há metodo para construir revista nele, de qualquer modo.
+
+        #region AdHoc Setter
+
+        public void AtribuirArtigo(Artigo artigo)
+        {
+            if (artigo.Id.Equals(null)) return;
+            Artigos.Add(artigo);
+        }
+
+        public void AtribuirListaArtigo(List<Artigo> artigos)
+        {
+            if (artigos.Equals(null)) return;
+            foreach (var x in artigos)
+            {
+                Artigos.Add(x);
+            }
+        }
+
+        public override void AtribuirAssunto(Assunto assunto)
+        {
+            if (assunto.Id.Equals(null)) return;
+            Assunto = assunto;
+        }
+
+        public override void AtribuirEditora(Editora editora)
+        {
+            if (editora.Id.Equals(null)) return;
+            Editora = editora;
+        }
+
+
+        #endregion
+
+        //terminado métodos para classe entity
+
         public override bool Valido()
         {
             Validacao();
             return ValidationResult.IsValid;
         }
 
+        
         private void Validacao()
         {
             //validação classe mãe material

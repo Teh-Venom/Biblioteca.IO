@@ -24,6 +24,9 @@ namespace Biblioteca.IO.Entity
 
         #endregion
         //pronto
+
+        //não há metodos para classe entity
+
         public override bool Valido()
         {
             Validacao();

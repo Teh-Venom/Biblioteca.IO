@@ -15,5 +15,10 @@ namespace Biblioteca.IO.Entity
         //nas classes filhas os construtores utilizam destes atributos.
 
         public abstract override bool Valido();
+
+        public abstract void AtribuirAssunto(Assunto assunto);
+
+        public abstract void AtribuirEditora(Editora editora);
+        //terminado métodos para classe entity
     }
 }

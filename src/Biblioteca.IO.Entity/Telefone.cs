@@ -50,6 +50,19 @@ namespace Biblioteca.IO.Entity
         #endregion
         //pronto, concluido para metodo atribuir tipotelefone
 
+        #region AdHoc Setter
+
+        public void AtribuirTipoTelefone(TipoTelefone tipoTelefone)
+        {
+            if (tipoTelefone.Id.Equals(null)) return;
+
+            TipoTelefone = tipoTelefone;
+        }
+
+
+        #endregion
+        //terminado métodos para classe entity
+
         public override bool Valido()
         {
             Validacao();
