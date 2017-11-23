@@ -5,32 +5,32 @@ USE Biblioteca
 GO
 
 
-CREATE TABLE Estado (
+CREATE TABLE Estados (
   idEstado INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(50) NOT NULL,
   Sigla NVARCHAR(2) NOT NULL,
 
-  CONSTRAINT PK_Estado_IdEstado PRIMARY KEY (IdEstado)
+  CONSTRAINT PK_Estados_IdEstado PRIMARY KEY (IdEstado)
 )
 GO
 
 
 
-CREATE TABLE Cidade (
+CREATE TABLE Cidades (
   idCidade INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(50) NOT NULL,
   idEstado INT NOT NULL,
 
-  CONSTRAINT PK_Cidade_IdCidade PRIMARY KEY (idCidade),
+  CONSTRAINT PK_Cidades_IdCidade PRIMARY KEY (idCidade),
 
-  CONSTRAINT FK_Cidade_Estado_IdEstado FOREIGN KEY (idEstado)
-  REFERENCES Estado (idEstado)
+  CONSTRAINT FK_Cidades_Estados_IdEstado FOREIGN KEY (idEstado)
+  REFERENCES Estados (idEstado)
 )
 
 
-CREATE TABLE Endereco (
+CREATE TABLE Enderecos (
   idEndereco INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Logradouro NVARCHAR(150) NOT NULL,
@@ -40,21 +40,21 @@ CREATE TABLE Endereco (
   Complemento NVARCHAR(20) NOT NULL,
   idCidade INT NOT NULL,
 
-  CONSTRAINT PK_Endereco_IdEndereco PRIMARY KEY (idEndereco),
+  CONSTRAINT PK_Enderecos_IdEndereco PRIMARY KEY (idEndereco),
 
-  CONSTRAINT FK_Endereco_Cidade_IdCidade FOREIGN KEY (idCidade)
-  REFERENCES Cidade (idCidade)
+  CONSTRAINT FK_Enderecos_Cidades_IdCidade FOREIGN KEY (idCidade)
+  REFERENCES Cidades (idCidade)
 )
 
-CREATE TABLE TipoTelefone (
+CREATE TABLE TiposTelefones (
   idTipoTelefone INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(10) NOT NULL,
 
-  CONSTRAINT PK_TipoTelefone_IdTipoTelefone PRIMARY KEY (idTipoTelefone)
+  CONSTRAINT PK_TiposTelefones_IdTipoTelefone PRIMARY KEY (idTipoTelefone)
 )
 
-CREATE TABLE Pessoa (
+CREATE TABLE Pessoas (
   idPessoa INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(50) NOT NULL,
@@ -64,13 +64,13 @@ CREATE TABLE Pessoa (
   Ativo BIT NOT NULL,
   idEndereco INT NOT NULL,
 
-  CONSTRAINT PK_Pessoa_IdPessoa PRIMARY KEY (idPessoa),
+  CONSTRAINT PK_Pessoas_IdPessoa PRIMARY KEY (idPessoa),
 
-  CONSTRAINT FK_Pessoa_Endereco_IdEndereco FOREIGN KEY (idEndereco)
-  REFERENCES Endereco (idEndereco)
+  CONSTRAINT FK_Pessoas_Enderecos_IdEndereco FOREIGN KEY (idEndereco)
+  REFERENCES Enderecos (idEndereco)
 )
 
-CREATE TABLE Usuario (
+CREATE TABLE Usuarios (
   idUsuario INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Email NVARCHAR(50) NOT NULL,
@@ -78,13 +78,13 @@ CREATE TABLE Usuario (
   Ativo BIT NOT NULL,
   idPessoa INT NOT NULL,
   
-  CONSTRAINT PK_Usuario_IdUsuario PRIMARY KEY (idUsuario),
+  CONSTRAINT PK_Usuarios_IdUsuario PRIMARY KEY (idUsuario),
 
-  CONSTRAINT FK_Usuario_Pessoa_IdPessoa FOREIGN KEY (idPessoa)
-  REFERENCES Pessoa (idPessoa)
+  CONSTRAINT FK_Usuarios_Pessoas_IdPessoa FOREIGN KEY (idPessoa)
+  REFERENCES Pessoas (idPessoa)
 )
 
-CREATE TABLE Telefone (
+CREATE TABLE Telefones (
   idTelefone INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   idPessoa INT NOT NULL,
@@ -92,32 +92,48 @@ CREATE TABLE Telefone (
   Numero NVARCHAR(20) NOT NULL,
   Ativo BIT NOT NULL,
 
-  CONSTRAINT PK_Telefone_IdTelefone PRIMARY KEY (idTelefone),
+  CONSTRAINT PK_Telefones_IdTelefone PRIMARY KEY (idTelefone),
 
-  CONSTRAINT FK_Telefone_Pessoa_IdPessoa FOREIGN KEY (idPessoa)
-  REFERENCES Pessoa (idPessoa),
+  CONSTRAINT FK_Telefones_Pessoas_IdPessoa FOREIGN KEY (idPessoa)
+  REFERENCES Pessoas (idPessoa),
 
-  CONSTRAINT FK_Telefone_TipoTelefone_idTipoTelefone FOREIGN KEY (idTipoTelefone)
-  REFERENCES TipoTelefone (idTipoTelefone)
+  CONSTRAINT FK_Telefones_TiposTelefones_idTipoTelefone FOREIGN KEY (idTipoTelefone)
+  REFERENCES TiposTelefones (idTipoTelefone)
 )
 
-CREATE TABLE Assunto (
+CREATE TABLE TelefonesPessoas(
+  IdTelefonePessoa INT NOT NULL IDENTITY(1,1),
+  DataCadastro DATETIME NOT NULL,
+  IdTelefone INT NOT NULL,
+  IdPessoa INT NOT NULL,
+
+  CONSTRAINT PK_TelefonesPessoas_IdTelefonePessoa PRIMARY KEY(IdTelefonePessoa),
+  
+  CONSTRAINT FK_TelefonesPessoas_Pessoas_IdPessoa FOREIGN KEY (idPessoa)
+  REFERENCES Pessoas (idPessoa),
+
+  CONSTRAINT FK_TelefonesPessoas_Telefones_IdTelefone FOREIGN KEY (idTelefone)
+  REFERENCES Telefones(idTelefone)
+
+)
+
+CREATE TABLE Assuntos (
   idAssunto INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(50) NOT NULL,
 
-  CONSTRAINT PK_Assunto_IdAssunto PRIMARY KEY (idAssunto)
+  CONSTRAINT PK_Assuntos_IdAssunto PRIMARY KEY (idAssunto)
 )
 
-CREATE TABLE Editora (
+CREATE TABLE Editoras (
   idEditora INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(50) NOT NULL,
 
-  CONSTRAINT PK_Editora_IdEditora PRIMARY KEY (idEditora)
+  CONSTRAINT PK_Editoras_IdEditora PRIMARY KEY (idEditora)
 )
 
-CREATE TABLE Material (
+CREATE TABLE Materiais (
   IdMaterial INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Titulo NVARCHAR(50) NOT NULL,
@@ -125,26 +141,26 @@ CREATE TABLE Material (
   idEditora INT NOT NULL,
   Ativo BIT NOT NULL,
 
-  CONSTRAINT PK_Material_IdMaterial PRIMARY KEY (IdMaterial),
+  CONSTRAINT PK_Materiais_IdMaterial PRIMARY KEY (IdMaterial),
 
-  CONSTRAINT FK_Material_Assunto_IdAssunto FOREIGN KEY (idAssunto)
-  REFERENCES Assunto (idAssunto),
+  CONSTRAINT FK_Materiais_Assuntos_IdAssunto FOREIGN KEY (idAssunto)
+  REFERENCES Assuntos (idAssunto),
 
-  CONSTRAINT FK_Material_Editora_IdEditora FOREIGN KEY (idEditora)
-  REFERENCES Editora (idEditora)
+  CONSTRAINT FK_Materiais_Editoras_IdEditora FOREIGN KEY (idEditora)
+  REFERENCES Editoras (idEditora)
 )
 
-CREATE TABLE Livro (
+CREATE TABLE Livros (
   IdLivro INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Edicao NVARCHAR(50) NOT NULL,
   Isbn NVARCHAR(50) NOT NULL,
   IdMaterial INT NOT NULL,
 
-  CONSTRAINT FK_Livro_IdLivro PRIMARY KEY (IdLivro),
+  CONSTRAINT FK_Livros_IdLivro PRIMARY KEY (IdLivro),
 
-  CONSTRAINT FK_Livro_Material_IdMaterial FOREIGN KEY (IdMaterial)
-  REFERENCES Material (IdMaterial)
+  CONSTRAINT FK_Livros_Materiais_IdMaterial FOREIGN KEY (IdMaterial)
+  REFERENCES Materiais (IdMaterial)
 )
 
 CREATE TABLE Revista (
@@ -154,41 +170,56 @@ CREATE TABLE Revista (
   IdMaterial INT NOT NULL,
   Ativo BIT NOT NULL,
 
-  CONSTRAINT PK_Revista_IdRevista PRIMARY KEY (IdRevista),
+  CONSTRAINT PK_Revistas_IdRevista PRIMARY KEY (IdRevista),
 
-  CONSTRAINT FK_Revista_Material_IdMaterial FOREIGN KEY (IdMaterial)
-  REFERENCES Material (IdMaterial)   
+  CONSTRAINT FK_Revistas_Materiais_IdMaterial FOREIGN KEY (IdMaterial)
+  REFERENCES Materiais (IdMaterial)   
 )
 
 
 
-CREATE TABLE Autor (
+CREATE TABLE Autors (
   IdAutor INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(50) NOT NULL,
   Email NVARCHAR(50) NOT NULL,
   
 
-  CONSTRAINT PK_Autor_IdAutor PRIMARY KEY (IdAutor)
+  CONSTRAINT PK_Autors_IdAutor PRIMARY KEY (IdAutor)
 )
 
 
-CREATE TABLE Artigo (
+CREATE TABLE Artigos (
   IdArtigo INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
-  IdRevista INT NOT NULL,
   Titulo NVARCHAR(50) NOT NULL,
   Ativo BIT NOT NULL,
 
-  CONSTRAINT PK_Artigo_IdArtigo PRIMARY KEY (IdArtigo),
+  CONSTRAINT PK_Artigos_IdArtigo PRIMARY KEY (IdArtigo),
 
-  CONSTRAINT FK_Artigo_Revista_IdRevista FOREIGN KEY (IdRevista)
-  REFERENCES Revista (IdRevista)
+  CONSTRAINT FK_Artigos_Revistas_IdRevista FOREIGN KEY (IdRevista)
+  REFERENCES Revistas (IdRevista)
+)
+
+CREATE TABLE RevistasArtigos(
+  IdRevistaArtigo INT NOT NUL IDENTITY(1,1),
+  IdRevista INT NOT NULL,
+  IdArtigo INT NOT NULL,
+
+  CONSTRAINT PK_RevistasArtigos_IdRevistaArtigo PRIMARY KEY (IdRevistaArtigo),
+
+  CONSTRAINT FK_RevistasArtigos_Revistas_IdRevista FOREIGN KEY (IdRevista)
+  REFERENCES Revistas (IdRevista),
+
+  CONSTRAINT FK_RevistasArtigos_Artigos_IdArtigo FOREIGN KEY (IdArtigo)
+  REFERENCES Artigos(IdArtigo)
+
+
 )
 
 
 
-CREATE TABLE Reserva (
+CREATE TABLE Reservas (
   IdReserva INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   DataReserva DATETIME NOT NULL,
@@ -197,13 +228,13 @@ CREATE TABLE Reserva (
   IdMaterial INT NOT NULL,
   Ativo BIT NOT NULL,
 
-  CONSTRAINT PK_Reserva_IdReserva PRIMARY KEY (IdReserva),
+  CONSTRAINT PK_Reservas_IdReserva PRIMARY KEY (IdReserva),
 
-  CONSTRAINT FK_Reserva_Usuario_idUsuario FOREIGN KEY (idUsuario)
-  REFERENCES Usuario (idUsuario),
+  CONSTRAINT FK_Reservas_Usuarios_idUsuario FOREIGN KEY (idUsuario)
+  REFERENCES Usuarios (idUsuario),
 
-  CONSTRAINT FK_Reserva_Material_IdMaterial FOREIGN KEY (IdMaterial)
-  REFERENCES Material (IdMaterial)    
+  CONSTRAINT FK_Reservas_Materiais_IdMaterial FOREIGN KEY (IdMaterial)
+  REFERENCES Materiais (IdMaterial)    
 )
 
 CREATE TABLE MateriaisReservas (
@@ -214,11 +245,15 @@ CREATE TABLE MateriaisReservas (
 
   CONSTRAINT PK_MateriaisReservas_IdMateriaisReservas PRIMARY KEY (IdMateriaisReservas),
 
-  
+  CONSTRAINT FK_MateriaisReservas_Materiais_IdMaterial FOREIGN KEY (IdMaterial)
+  REFERENCES Materiais(IdMaterial),
+
+  CONSTRAINT FK_MateriaisReservas_Reservas_IdReserva FOREIGN KEY (IdReserva)
+  REFERENCES Reservas(IdReserva)
 )
 
 
-CREATE TABLE Emprestimo (
+CREATE TABLE Emprestimos (
   IdEmprestimo INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   DataEmprestimo DATETIME NOT NULL,
@@ -226,10 +261,10 @@ CREATE TABLE Emprestimo (
   DataRetorno DATETIME NOT NULL,
   idUsuario INT NOT NULL,
 
-  CONSTRAINT PK_Emprestimo_IdEmprestimo PRIMARY KEY (IdEmprestimo),
+  CONSTRAINT PK_Emprestimos_IdEmprestimo PRIMARY KEY (IdEmprestimo),
 
-  CONSTRAINT FK_Emprestimo_Usuario_idUsuario FOREIGN KEY (idUsuario)
-  REFERENCES Usuario (idUsuario),
+  CONSTRAINT FK_Emprestimos_Usuarios_idUsuario FOREIGN KEY (idUsuario)
+  REFERENCES Usuarios (idUsuario),
 
 )
 
@@ -240,40 +275,40 @@ CREATE TABLE MateriaisEmprestimos(
 
   CONSTRAINT PK_MateriaisEmprestimos_IdMaterialemprestimos PRIMARY KEY(IdMaterialEmprestimo),
 
-  CONSTRAINT FK_MateriaisEmprestimos_Emprestimo_IdEmprestimo FOREIGN KEY (IdEmprestimo)
+  CONSTRAINT FK_MateriaisEmprestimos_Emprestimos_IdEmprestimo FOREIGN KEY (IdEmprestimo)
   REFERENCES Material (IdMaterial),
 
-  CONSTRAINT FK_MateriaisEmprestimos_Material_IdMaterial FOREIGN KEY (IdMaterial)
-  REFERENCES Material (IdMaterial)
+  CONSTRAINT FK_MateriaisEmprestimos_Materiais_IdMaterial FOREIGN KEY (IdMaterial)
+  REFERENCES Materiais (IdMaterial)
 )
 
 
 
-CREATE TABLE LivroAutor (
+CREATE TABLE LivrosAutores (
   IdLivroAutor INT NOT NULL IDENTITY(1, 1),
   IdLivro INT NOT NULL,
   IdAutor INT NOT NULL,
 
-  CONSTRAINT PK_LivroAutor_IdLivroAutor PRIMARY KEY (IdLivroAutor),
+  CONSTRAINT PK_LivrosAutores_IdLivroAutor PRIMARY KEY (IdLivroAutor),
 
-  CONSTRAINT FK_LivroAutor_Livro_IdLivro FOREIGN KEY (IdLivro)
-  REFERENCES Livro (IdLivro),
+  CONSTRAINT FK_LivrosAutores_Livros_IdLivro FOREIGN KEY (IdLivro)
+  REFERENCES Livros (IdLivro),
 
-  CONSTRAINT FK_LivroAutor_Autor_IdAutor FOREIGN KEY (IdAutor)
-  REFERENCES Autor (IdAutor)    
+  CONSTRAINT FK_LivrosAutores_Autores_IdAutor FOREIGN KEY (IdAutor)
+  REFERENCES Autores (IdAutor)    
 )
 
 
-CREATE TABLE ArtigoAutor (
+CREATE TABLE ArtigosAutores (
   IdArtigoAutor INT NOT NULL IDENTITY(1, 1),
   IdArtigo INT NOT NULL,
   IdAutor INT NOT NULL,
 
-  CONSTRAINT PK_ArtigoAutor_IdArtigoAutor PRIMARY KEY (IdArtigoAutor),
+  CONSTRAINT PK_ArtigosAutores_IdArtigoAutor PRIMARY KEY (IdArtigoAutor),
 
-  CONSTRAINT FK_ArtigAutor_Artigo_IdArtigo FOREIGN KEY (IdArtigo)
+  CONSTRAINT FK_ArtigosAutores_Artigos_IdArtigo FOREIGN KEY (IdArtigo)
   REFERENCES Artigo (IdArtigo),
 
-  CONSTRAINT FK_ArtigoAutor_Autor_IdAutor FOREIGN KEY (IdAutor)
-  REFERENCES Autor (IdAutor)
+  CONSTRAINT FK_ArtigosAutores_Autores_IdAutor FOREIGN KEY (IdAutor)
+  REFERENCES Autores (IdAutor)
 )
