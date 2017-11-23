@@ -59,8 +59,9 @@ CREATE TABLE Pessoa (
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(50) NOT NULL,
   Rg NVARCHAR(15) NOT NULL,
-  Cpf NVARCHAR(11) NOT NULL,
   DataNascimento DATETIME NOT NULL,
+  Cpf NVARCHAR(11) NOT NULL,
+  Ativo BIT NOT NULL,
   idEndereco INT NOT NULL,
 
   CONSTRAINT PK_Pessoa_IdPessoa PRIMARY KEY (idPessoa),
@@ -74,8 +75,9 @@ CREATE TABLE Usuario (
   DataCadastro DATETIME NOT NULL,
   Email NVARCHAR(50) NOT NULL,
   Senha NVARCHAR(32) NOT NULL,
+  Ativo BIT NOT NULL,
   idPessoa INT NOT NULL,
-
+  
   CONSTRAINT PK_Usuario_IdUsuario PRIMARY KEY (idUsuario),
 
   CONSTRAINT FK_Usuario_Pessoa_IdPessoa FOREIGN KEY (idPessoa)
@@ -88,6 +90,7 @@ CREATE TABLE Telefone (
   idPessoa INT NOT NULL,
   idTipoTelefone INT NOT NULL,
   Numero NVARCHAR(20) NOT NULL,
+  Ativo BIT NOT NULL,
 
   CONSTRAINT PK_Telefone_IdTelefone PRIMARY KEY (idTelefone),
 
@@ -120,6 +123,7 @@ CREATE TABLE Material (
   Titulo NVARCHAR(50) NOT NULL,
   idAssunto INT NOT NULL,
   idEditora INT NOT NULL,
+  Ativo BIT NOT NULL,
 
   CONSTRAINT PK_Material_IdMaterial PRIMARY KEY (IdMaterial),
 
@@ -148,6 +152,7 @@ CREATE TABLE Revista (
   DataCadastro DATETIME NOT NULL,
   Colecao NVARCHAR(50) NOT NULL,
   IdMaterial INT NOT NULL,
+  Ativo BIT NOT NULL,
 
   CONSTRAINT PK_Revista_IdRevista PRIMARY KEY (IdRevista),
 
@@ -162,6 +167,7 @@ CREATE TABLE Autor (
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(50) NOT NULL,
   Email NVARCHAR(50) NOT NULL,
+  
 
   CONSTRAINT PK_Autor_IdAutor PRIMARY KEY (IdAutor)
 )
@@ -172,6 +178,7 @@ CREATE TABLE Artigo (
   DataCadastro DATETIME NOT NULL,
   IdRevista INT NOT NULL,
   Titulo NVARCHAR(50) NOT NULL,
+  Ativo BIT NOT NULL,
 
   CONSTRAINT PK_Artigo_IdArtigo PRIMARY KEY (IdArtigo),
 
@@ -188,6 +195,7 @@ CREATE TABLE Reserva (
   DataValidade DATETIME NOT NULL,
   idUsuario INT NOT NULL,
   IdMaterial INT NOT NULL,
+  Ativo BIT NOT NULL,
 
   CONSTRAINT PK_Reserva_IdReserva PRIMARY KEY (IdReserva),
 
@@ -198,6 +206,17 @@ CREATE TABLE Reserva (
   REFERENCES Material (IdMaterial)    
 )
 
+CREATE TABLE MateriaisReservas (
+  IdMAteriaisReservas INT NOT NULL IDENTITY(1,1),
+  IdMaterial INT NOT NULL,
+  IdReserva INT NOT NULL,
+  
+
+  CONSTRAINT PK_MateriaisReservas_IdMateriaisReservas PRIMARY KEY (IdMateriaisReservas),
+
+  
+)
+
 
 CREATE TABLE Emprestimo (
   IdEmprestimo INT NOT NULL IDENTITY(1, 1),
@@ -206,14 +225,25 @@ CREATE TABLE Emprestimo (
   DataPrevistaRetorno DATETIME NOT NULL,
   DataRetorno DATETIME NOT NULL,
   idUsuario INT NOT NULL,
-  IdMaterial INT NOT NULL,
 
   CONSTRAINT PK_Emprestimo_IdEmprestimo PRIMARY KEY (IdEmprestimo),
 
   CONSTRAINT FK_Emprestimo_Usuario_idUsuario FOREIGN KEY (idUsuario)
   REFERENCES Usuario (idUsuario),
 
-  CONSTRAINT FK_Emprestimo_Material_IdMaterial FOREIGN KEY (IdMaterial)
+)
+
+CREATE TABLE MateriaisEmprestimos(
+  IdMaterialEmprestimo INT NOT NULL IDENTITY(1, 1),
+  IdMaterial INT NOT NULL,
+  IdEmprestimo INT NOT NULL,
+
+  CONSTRAINT PK_MateriaisEmprestimos_IdMaterialemprestimos PRIMARY KEY(IdMaterialEmprestimo),
+
+  CONSTRAINT FK_MateriaisEmprestimos_Emprestimo_IdEmprestimo FOREIGN KEY (IdEmprestimo)
+  REFERENCES Material (IdMaterial),
+
+  CONSTRAINT FK_MateriaisEmprestimos_Material_IdMaterial FOREIGN KEY (IdMaterial)
   REFERENCES Material (IdMaterial)
 )
 
