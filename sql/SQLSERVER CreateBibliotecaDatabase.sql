@@ -163,7 +163,7 @@ CREATE TABLE Livros (
   REFERENCES Materiais (IdMaterial)
 )
 
-CREATE TABLE Revista (
+CREATE TABLE Revistas (
   IdRevista INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Colecao NVARCHAR(50) NOT NULL,
@@ -195,14 +195,11 @@ CREATE TABLE Artigos (
   Titulo NVARCHAR(50) NOT NULL,
   Ativo BIT NOT NULL,
 
-  CONSTRAINT PK_Artigos_IdArtigo PRIMARY KEY (IdArtigo),
-
-  CONSTRAINT FK_Artigos_Revistas_IdRevista FOREIGN KEY (IdRevista)
-  REFERENCES Revistas (IdRevista)
+  CONSTRAINT PK_Artigos_IdArtigo PRIMARY KEY (IdArtigo)
 )
 
 CREATE TABLE RevistasArtigos(
-  IdRevistaArtigo INT NOT NUL IDENTITY(1,1),
+  IdRevistaArtigo INT NOT NULL IDENTITY(1,1),
   IdRevista INT NOT NULL,
   IdArtigo INT NOT NULL,
 
@@ -276,7 +273,7 @@ CREATE TABLE MateriaisEmprestimos(
   CONSTRAINT PK_MateriaisEmprestimos_IdMaterialemprestimos PRIMARY KEY(IdMaterialEmprestimo),
 
   CONSTRAINT FK_MateriaisEmprestimos_Emprestimos_IdEmprestimo FOREIGN KEY (IdEmprestimo)
-  REFERENCES Material (IdMaterial),
+  REFERENCES Emprestimos (IdEmprestimo),
 
   CONSTRAINT FK_MateriaisEmprestimos_Materiais_IdMaterial FOREIGN KEY (IdMaterial)
   REFERENCES Materiais (IdMaterial)
