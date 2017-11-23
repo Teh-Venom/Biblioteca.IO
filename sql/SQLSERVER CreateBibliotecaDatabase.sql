@@ -178,14 +178,14 @@ CREATE TABLE Revistas (
 
 
 
-CREATE TABLE Autors (
+CREATE TABLE Autores (
   IdAutor INT NOT NULL IDENTITY(1, 1),
   DataCadastro DATETIME NOT NULL,
   Nome NVARCHAR(50) NOT NULL,
   Email NVARCHAR(50) NOT NULL,
   
 
-  CONSTRAINT PK_Autors_IdAutor PRIMARY KEY (IdAutor)
+  CONSTRAINT PK_Autores_IdAutor PRIMARY KEY (IdAutor)
 )
 
 
@@ -304,7 +304,7 @@ CREATE TABLE ArtigosAutores (
   CONSTRAINT PK_ArtigosAutores_IdArtigoAutor PRIMARY KEY (IdArtigoAutor),
 
   CONSTRAINT FK_ArtigosAutores_Artigos_IdArtigo FOREIGN KEY (IdArtigo)
-  REFERENCES Artigo (IdArtigo),
+  REFERENCES Artigos (IdArtigo),
 
   CONSTRAINT FK_ArtigosAutores_Autores_IdAutor FOREIGN KEY (IdAutor)
   REFERENCES Autores (IdAutor)
