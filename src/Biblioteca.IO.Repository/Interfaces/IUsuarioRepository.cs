@@ -5,22 +5,19 @@ namespace Biblioteca.IO.Repository.Interfaces
 {
     public interface IUsuarioRepository
         {
-         void Inserir(Usuario obj);
-
-        Usuario Obter(int id);
 
          List<Usuario> ObterPorEmail(string email);
 
-         bool VerificarUsuarioExistente(string email);
+         bool VerificarUsuarioExistente(Usuario usuario);
 
-         bool VerificarUsuarioDesativado(int id);
+         bool VerificarUsuarioDesativado(Usuario usuario);
 
-         void Deletar(int id);
+         Usuario ObterPorId(int id);
 
-         void Atualizar(Usuario obj);
+         void AlterarSenha(Usuario usuario);
 
-         void AtribuirPessoa(int idPessoa);
+         void DesativarUsuario(Usuario usuario);
 
-         void DesativarUsuario(int id);
+         void CadastrarUsuario(Usuario usuario);
     }
 }

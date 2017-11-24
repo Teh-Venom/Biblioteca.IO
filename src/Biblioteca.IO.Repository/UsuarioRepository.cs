@@ -11,18 +11,6 @@ namespace Biblioteca.IO.Repository
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-
-
-        public void Inserir(Usuario obj) //cadastrar usuario
-        {
-            throw new NotImplementedException();
-        }
-
-        public Usuario Obter(int id) //obter por id
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Usuario> ObterPorEmail(string email)
         {
             throw new NotImplementedException();
@@ -38,17 +26,12 @@ namespace Biblioteca.IO.Repository
             throw new NotImplementedException();
         }
 
-        public void Deletar(int id) //será excluido logicamente
+        public Usuario ObterPorId(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Atualizar(Usuario obj) 
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AtribuirPessoa(int idPessoa)
+        public void AlterarSenha(Usuario obj)
         {
             throw new NotImplementedException();
         }
@@ -58,8 +41,9 @@ namespace Biblioteca.IO.Repository
             throw new NotImplementedException();
         }
 
-
-
-
+        public void CadastrarUsuario(Usuario obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

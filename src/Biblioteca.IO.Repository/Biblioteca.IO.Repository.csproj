@@ -43,6 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IArtigoRepository.cs" />
+    <Compile Include="Interfaces\IAssuntoRepository.cs" />
+    <Compile Include="Interfaces\IAutorRepository.cs" />
+    <Compile Include="Interfaces\ICidadeRepository.cs" />
+    <Compile Include="Interfaces\IEditoraRepository.cs" />
+    <Compile Include="Interfaces\IEmprestimoRepository.cs" />
+    <Compile Include="Interfaces\IEnderecoRepository.cs" />
+    <Compile Include="Interfaces\IEstadoRepository.cs" />
+    <Compile Include="Interfaces\ILivroRepository.cs" />
+    <Compile Include="Interfaces\IMaterialRepository.cs" />
+    <Compile Include="Interfaces\IPessoaRepository.cs" />
+    <Compile Include="Interfaces\IRevistaRepository.cs" />
+    <Compile Include="Interfaces\ITelefoneRepository.cs" />
+    <Compile Include="Interfaces\ITipoTelefoneRepository.cs" />
     <Compile Include="Interfaces\IUsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioRepository.cs" />

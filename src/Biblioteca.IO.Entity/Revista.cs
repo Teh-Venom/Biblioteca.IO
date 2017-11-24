@@ -135,7 +135,7 @@ namespace Biblioteca.IO.Entity
         {
             //validação classe mãe material
             RuleFor(x => x.Assunto)
-                .NotEmpty().WithMessage("Assunto não pode ser vazio!")
+                .NotEmpty().WithMessage("Assunto não pode ser vazio!");
             RuleFor(x => x.Editora)
                 .NotEmpty().WithMessage("Editora não pode estar vazia!");
             RuleFor(x => x.Titulo)

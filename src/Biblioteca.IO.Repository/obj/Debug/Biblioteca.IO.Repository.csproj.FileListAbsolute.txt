@@ -9,3 +9,4 @@ E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repo
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.csprojResolveAssemblyReference.cache
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.dll
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Repository\obj\Debug\Biblioteca.IO.Repository.csproj.CoreCompileInputs.cache

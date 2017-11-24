@@ -3,3 +3,4 @@ E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\Biblioteca.IO.CrossCut
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\Biblioteca.IO.CrossCutting\obj\Debug\Biblioteca.IO.CrossCutting.csprojResolveAssemblyReference.cache
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\Biblioteca.IO.CrossCutting\obj\Debug\Biblioteca.IO.CrossCutting.dll
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\Biblioteca.IO.CrossCutting\obj\Debug\Biblioteca.IO.CrossCutting.pdb
+E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\Biblioteca.IO.CrossCutting\obj\Debug\Biblioteca.IO.CrossCutting.csproj.CoreCompileInputs.cache

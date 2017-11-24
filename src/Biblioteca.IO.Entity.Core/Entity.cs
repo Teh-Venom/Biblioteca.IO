@@ -4,7 +4,7 @@ using FluentValidation.Results;
 
 namespace Biblioteca.IO.Entity.Core
 {
-    public abstract class Entity<T> : AbstractValidator<T> where T: Entity<T>
+    public abstract class Entity<T> : AbstractValidator<T> where T : Entity<T>
     {
         public int Id { get; protected set; }
 
@@ -12,11 +12,11 @@ namespace Biblioteca.IO.Entity.Core
 
         public ValidationResult ValidationResult { get; protected set; }
 
-        protected Entity() //Aplicação pendente, verificar
+        protected Entity()
         {
             ValidationResult = new ValidationResult();
         }
-        
+
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(this, obj))
@@ -35,7 +35,7 @@ namespace Biblioteca.IO.Entity.Core
             return GetType().GetHashCode() * 999 + Id.GetHashCode();
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return string.Format("Tipo: {0} - [ID: {1}]", GetType().Name, Id);
         }
