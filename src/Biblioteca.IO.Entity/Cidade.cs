@@ -12,15 +12,15 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
-        public Cidade(int id, DateTime dataCadastro, string nome, Estado estado)
+        public Cidade(int id, DateTime dataCadastro, string nome, int idEstado) //TODO Ver factory estado/cidade aplicar no resto.
         {
             Id = id;
             DataCadastro = dataCadastro;
             Nome = nome;
-            Estado = estado;
+            Estado = Estado.EstadoFactory.Criar(idEstado);
         }
 
-        public Cidade(DateTime dataCadastro, string nome, Estado estado)
+        public Cidade(DateTime dataCadastro, string nome, Estado estado) 
         {
             DataCadastro = dataCadastro;
             Nome = nome;
@@ -45,7 +45,7 @@ namespace Biblioteca.IO.Entity
 
         #region AdHoc Setter
 
-        public void AtribuirEstado(Estado estado)
+        public void AtribuirEstado(Estado estado) //TODO validar objeto antes de settar
         {
             if (estado.Id.Equals(null)) return;
 

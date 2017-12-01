@@ -8,3 +8,13 @@ E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Enti
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity\obj\Debug\Biblioteca.IO.Entity.dll
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity\obj\Debug\Biblioteca.IO.Entity.pdb
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity\obj\Debug\Biblioteca.IO.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\bin\Debug\Biblioteca.IO.Entity.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\bin\Debug\Biblioteca.IO.Entity.pdb
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\bin\Debug\Biblioteca.IO.Entity.Core.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\bin\Debug\FluentValidation.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\bin\Debug\FluentValidation.xml
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\obj\Debug\Biblioteca.IO.Entity.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\obj\Debug\Biblioteca.IO.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\obj\Debug\Biblioteca.IO.Entity.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity\obj\Debug\Biblioteca.IO.Entity.pdb

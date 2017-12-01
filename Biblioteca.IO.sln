@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Repositories", "3.1 -
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - CrossCutting", "3.2 - CrossCutting", "{0B4C7F10-E192-4E90-ADB3-15B1813F4B97}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Entities", "4 - Entities", "{A1870643-C7F5-42CA-82D7-178B045617A3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{A1870643-C7F5-42CA-82D7-178B045617A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca.IO.Entity.Core", "src\Biblioteca.IO.Entity.Core\Biblioteca.IO.Entity.Core.csproj", "{6BB42D1C-9748-4908-9A4B-E94FCB5C2B08}"
 EndProject

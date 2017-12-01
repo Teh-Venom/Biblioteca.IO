@@ -14,3 +14,19 @@ E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Serv
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.dll
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.pdb
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Service.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Service.pdb
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.CrossCutting.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Entity.Core.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Entity.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Repository.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\FluentValidation.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.CrossCutting.pdb
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Entity.pdb
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\Biblioteca.IO.Repository.pdb
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\bin\Debug\FluentValidation.xml
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Service\obj\Debug\Biblioteca.IO.Service.pdb

@@ -13,3 +13,11 @@ E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Enti
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.dll
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.pdb
 E:\Quest items\Trabalhosos\GitHubRepository\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\Biblioteca.IO.Entity.Core.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\Biblioteca.IO.Entity.Core.pdb
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\FluentValidation.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\bin\Debug\FluentValidation.xml
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.dll
+C:\Users\Aluno\Desktop\Biblioteca.IO\src\Biblioteca.IO.Entity.Core\obj\Debug\Biblioteca.IO.Entity.Core.pdb

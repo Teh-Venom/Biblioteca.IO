@@ -28,9 +28,33 @@ namespace Biblioteca.IO.Entity
             Nome = nome;
         }
 
+        public Estado()
+        {
+
+        }
+
         #endregion
         //pronto
-        
+        #region Factory
+
+        public static class EstadoFactory
+        {
+            public static Estado Criar(int id)
+            {
+                var estado = new Estado();
+                estado.Id = id;
+                return estado;
+            }
+
+            public static Estado Criar(string nome)
+            {
+                var estado = new Estado();
+                estado.Nome = nome;
+                return estado;
+            }
+        }
+
+        #endregion
         public override bool Valido()
         {
             Validacao();
