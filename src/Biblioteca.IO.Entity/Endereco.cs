@@ -108,6 +108,17 @@ namespace Biblioteca.IO.Entity
                 .LessThanOrEqualTo(DateTime.Now).WithMessage("Erro em coletar data atual!(Data futura)");
 
             ValidationResult = Validate(this);
+
+            ValidarCidade();
+        }
+
+        private void ValidarCidade()
+        {
+            if (Cidade.Valido()) return;
+            foreach (var error in Cidade.ValidationResult.Errors)
+            {
+                ValidationResult.Errors.Add(error);
+            }
         }
         //validado
     }

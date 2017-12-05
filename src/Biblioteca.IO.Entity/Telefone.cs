@@ -61,7 +61,7 @@ namespace Biblioteca.IO.Entity
 
 
         #endregion
-        //terminado métodos para classe entity
+        //terminado métodos para classe entity 
 
         public override bool Valido()
         {

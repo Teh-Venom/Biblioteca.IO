@@ -47,7 +47,7 @@ namespace Biblioteca.IO.Entity
 
         public void AtribuirEstado(Estado estado) //TODO validar objeto antes de settar
         {
-            if (estado.Id.Equals(null)) return;
+            if (!estado.Valido()) return;
 
             Estado = estado;
         }
@@ -61,7 +61,7 @@ namespace Biblioteca.IO.Entity
             return ValidationResult.IsValid;
         }
 
-        private void Validacao()
+        private void Validacao() //TODO VERIFICAR metodos
         {
             RuleFor(x => x.Nome)
                 .NotEmpty().WithMessage("Nome não pode estar vazio!")
@@ -71,7 +71,22 @@ namespace Biblioteca.IO.Entity
             RuleFor(x => x.DataCadastro)
                 .NotEmpty().WithMessage("Erro em coletar data atual! consulte o programador mais próximo.")
                 .LessThanOrEqualTo(DateTime.Now).WithMessage("Erro em coletar data atual!(Data futura)");
+            
             ValidationResult = Validate(this);
+
+            ValidarEstado(); 
+        }
+
+        private void ValidarEstado() 
+        {
+            if (Estado.Valido()) return;
+
+            foreach (var error in Estado.ValidationResult.Errors)
+            {
+                ValidationResult.Errors.Add(error);
+            }
+
+
         }
     }
 }
