@@ -16,46 +16,24 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
-        public Livro(DateTime dataCadastro, string titulo, Assunto assunto, Editora editora, string edicao, string isbn, List<Autor> autores)
-        {
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Assunto = assunto;
-            Editora = editora;
-            Edicao = edicao;
-            Isbn = isbn;
-            Autores = autores;
-        }
-
-        public Livro(int id, DateTime dataCadastro, string titulo, Assunto assunto, Editora editora, string edicao, string isbn, List<Autor> autores)
+        public Livro(int id, DateTime dataCadastro, string titulo, int assunto, int editora, string edicao, string isbn, List<int> idAutores)
         {
             Id = id;
             DataCadastro = dataCadastro;
             Titulo = titulo;
-            Assunto = assunto;
-            Editora = editora;
+            Assunto = Assunto.AssuntoFactory.Criar(idAssunto);
+            Editora = Editora.EditoraFactory.Criar(idEditora);
             Edicao = edicao;
             Isbn = isbn;
-            Autores = autores;
+            foreach (var x in idAutores)
+            {
+                Autores.Add(Autor.AutorFactory.Criar(x));
+            }
         }
 
-        public Livro(DateTime dataCadastro, string titulo, string edicao, string isbn, List<Autor> autores)
+        private Livro()
         {
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Edicao = edicao;
-            Isbn = isbn;
-            Autores = autores;
-        }
 
-        public Livro(int id, DateTime dataCadastro, string titulo, string edicao, string isbn, List<Autor> autores)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Edicao = edicao;
-            Isbn = isbn;
-            Autores = autores;
         }
 
         #endregion
@@ -63,13 +41,13 @@ namespace Biblioteca.IO.Entity
 
         #region AdHoc Setter
 
-        public void AtribuirArtigo(Autor autores)
+        public void AtribuirAutor(Autor autores)
         {
             if (autores.Id.Equals(null)) return;
             Autores.Add(autores);
         }
 
-        public void AtribuirListaArtigo(List<Autor> autores)
+        public void AtribuirListaAutor(List<Autor> autores)
         {
             if (autores.Equals(null)) return;
             foreach (var x in autores)

@@ -14,37 +14,18 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
-        public Usuario(DateTime dataCadastro, string email, string senha, Pessoa pessoa)
-        {
-            DataCadastro = dataCadastro;
-            Email = email;
-            Senha = senha;
-            Pessoa = pessoa;
-        }
-
-        public Usuario(int id, DateTime dataCadastro, string email, string senha, Pessoa pessoa)
+        public Usuario(int id, DateTime dataCadastro, string email, string senha, int idPessoa)
         {
             Id = id;
             DataCadastro = dataCadastro;
             Email = email;
             Senha = senha;
-            Pessoa = pessoa;
+            Pessoa = Pessoa.PessoaFactory.Criar(idPessoa);
         }
 
-        public Usuario(int id, DateTime dataCadastro, string email, string senha)
+        private Usuario()
         {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Email = email;
-            Senha = senha;
-        }
-
-        public Usuario(DateTime dataCadastro, string email, string senha)
-        {
-            DataCadastro = dataCadastro;
-            Email = email;
-            Senha = senha;
-
+            
         }
 
         #endregion
@@ -66,8 +47,28 @@ namespace Biblioteca.IO.Entity
             Pessoa = pessoa;
         }
 
+        public void CadastrarUsuario(string email, string senha)
+        {
+            Email = email;
+            Senha = senha;
+        }
         #endregion
 
+
+        #region Factory
+
+        public static class UsuarioFactory
+        {
+            public static Usuario Criar(int id)
+            {
+                var usuario = new Usuario();
+                usuario.Id = id;
+                return usuario;
+            }
+
+        }
+
+        #endregion
         //Terminado métodos da classe entity.
 
 

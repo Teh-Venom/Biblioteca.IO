@@ -12,41 +12,8 @@ namespace Biblioteca.IO.Entity
         public List<Artigo> Artigos { get; private set; }
 
         #region Construtores
-        public Revista(int id, DateTime dataCadastro, string titulo, string colecao, List<Artigo> artigos)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Colecao = colecao;
-            Artigos = artigos;
-        }
 
-        public Revista(DateTime dataCadastro, string titulo, string colecao, List<Artigo> artigos)
-        {
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Colecao = colecao;
-            Artigos = artigos;
-        }
-
-        public Revista(int id, DateTime dataCadastro, string titulo, string colecao)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Colecao = colecao;
-        }
-
-        public Revista(DateTime dataCadastro, string titulo, string colecao)
-        {
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Colecao = colecao;
-        }
-
-
-
-        public Revista(int id, DateTime dataCadastro, string titulo, Assunto assunto, Editora editora, string colecao, List<Artigo> artigos)
+        public Revista(int id, DateTime dataCadastro, string titulo, Assunto assunto, Editora editora, string colecao, List<int> idArtigos)
         {
             Id = id;
             DataCadastro = dataCadastro;
@@ -54,36 +21,15 @@ namespace Biblioteca.IO.Entity
             Assunto = assunto;
             Editora = editora;
             Colecao = colecao;
-            Artigos = artigos;
+            foreach (var x in idArtigos)
+            {
+                Artigos.Add(Artigo.ArtigoFactory.Criar(x));
+            }
         }
 
-        public Revista(DateTime dataCadastro, string titulo, Assunto assunto, Editora editora, string colecao, List<Artigo> artigos)
+        private Revista()
         {
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Assunto = assunto;
-            Editora = editora;
-            Colecao = colecao;
-            Artigos = artigos;
-        }
 
-        public Revista(int id, DateTime dataCadastro, string titulo, Assunto assunto, Editora editora, string colecao)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Assunto = assunto;
-            Editora = editora;
-            Colecao = colecao;
-        }
-
-        public Revista(DateTime dataCadastro, string titulo, Assunto assunto, Editora editora, string colecao)
-        {
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Assunto = assunto;
-            Editora = editora;
-            Colecao = colecao;
         }
 
         #endregion

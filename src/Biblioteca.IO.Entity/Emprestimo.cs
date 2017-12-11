@@ -14,52 +14,27 @@ namespace Biblioteca.IO.Entity
 
         public DateTime DataRetorno { get; private set; }
 
-        public List<Material> Materiais { get; private set; }
+        public List<int> IdMateriais { get; private set; }
 
         public Usuario Usuario { get; private set; }
 
 
         #region Construtores
-        public Emprestimo(DateTime dataCadastro, DateTime dataEmprestimo, DateTime dataPrevistaRetorno, DateTime dataRetorno, List<Material> materiais, Usuario usuario)
-        {
-            DataCadastro = dataCadastro;
-            DataEmprestimo = dataEmprestimo;
-            DataPrevistaRetorno = dataPrevistaRetorno;
-            DataRetorno = dataRetorno;
-            Materiais = materiais;
-            Usuario = usuario;
-        }
-
-        public Emprestimo(int id, DateTime dataCadastro, DateTime dataEmprestimo, DateTime dataPrevistaRetorno, DateTime dataRetorno, List<Material> materiais, Usuario usuario)
+        public Emprestimo(int id, DateTime dataCadastro, DateTime dataEmprestimo, DateTime dataPrevistaRetorno, DateTime dataRetorno, List<int> idMateriais, int idUsuario)
         {
             Id = id;
             DataCadastro = dataCadastro;
             DataEmprestimo = dataEmprestimo;
             DataPrevistaRetorno = dataPrevistaRetorno;
             DataRetorno = dataRetorno;
-            Materiais = materiais;
-            Usuario = usuario;
+            IdMateriais = idMateriais;
+            Usuario = Usuario.UsuarioFactory.Criar(idUsuario);
         }
 
-        public Emprestimo(DateTime dataCadastro, DateTime dataEmprestimo, DateTime dataPrevistaRetorno, List<Material> materiais, Usuario usuario)
+        private Emprestimo()
         {
-            DataCadastro = dataCadastro;
-            DataEmprestimo = dataEmprestimo;
-            DataPrevistaRetorno = dataPrevistaRetorno;
-            Materiais = materiais;
-            Usuario = usuario;
-        }
 
-        public Emprestimo(int id, DateTime dataCadastro, DateTime dataEmprestimo, DateTime dataPrevistaRetorno, List<Material> materiais, Usuario usuario)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            DataEmprestimo = dataEmprestimo;
-            DataPrevistaRetorno = dataPrevistaRetorno;
-            Materiais = materiais;
-            Usuario = usuario;
         }
-
 
         #endregion
         //pronto com atribuir DataRetorno.

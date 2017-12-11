@@ -13,24 +13,40 @@ namespace Biblioteca.IO.Entity
 
 
         #region Construtores
-        public Artigo(int id, DateTime dataCadastro, string titulo, List<Autor> autores)
+        public Artigo(int id, DateTime dataCadastro, string titulo, List<int> idAutores)
         {
             Id = id;
             DataCadastro = dataCadastro;
             Titulo = titulo;
-            Autores = autores;
+            foreach (var x in idAutores)
+            {
+                Autores.Add(Autor.AutorFactory.Criar(x));
+            }
         }
 
-        public Artigo(DateTime dataCadastro, string titulo, List<Autor> autores)
+        private Artigo()
         {
-            DataCadastro = dataCadastro;
-            Titulo = titulo;
-            Autores = autores;
+
         }
 
         #endregion
         //pronto
-        
+
+        #region Factory
+
+        public static class ArtigoFactory
+        {
+            public static Artigo Criar(int id)
+            {
+                var artigo = new Artigo();
+                artigo.Id = id;
+                return artigo;
+            }
+        }
+
+        #endregion
+
+
         public override bool Valido()
         {
             Validacao();

@@ -12,7 +12,7 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
-        public Cidade(int id, DateTime dataCadastro, string nome, int idEstado) //TODO Ver factory estado/cidade aplicar no resto.
+        public Cidade(int id, DateTime dataCadastro, string nome, int idEstado) 
         {
             Id = id;
             DataCadastro = dataCadastro;
@@ -20,24 +20,9 @@ namespace Biblioteca.IO.Entity
             Estado = Estado.EstadoFactory.Criar(idEstado);
         }
 
-        public Cidade(DateTime dataCadastro, string nome, Estado estado) 
+        private Cidade()
         {
-            DataCadastro = dataCadastro;
-            Nome = nome;
-            Estado = estado;
-        }
 
-        public Cidade(int id, DateTime dataCadastro, string nome)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Nome = nome;
-        }
-
-        public Cidade(DateTime dataCadastro, string nome)
-        {
-            DataCadastro = dataCadastro;
-            Nome = nome;
         }
 
         #endregion
@@ -55,13 +40,28 @@ namespace Biblioteca.IO.Entity
         #endregion
         //terminaod métodos classe entity
 
+        #region Factory
+
+        public static class CidadeFactory
+        {
+            public static Cidade Criar(int id)
+            {
+                var cidade = new Cidade();
+                cidade.Id = id;
+                return cidade;
+            }
+
+        }
+
+        #endregion
+
         public override bool Valido()
         {
             Validacao();
             return ValidationResult.IsValid;
         }
 
-        private void Validacao() //TODO VERIFICAR metodos
+        private void Validacao()
         {
             RuleFor(x => x.Nome)
                 .NotEmpty().WithMessage("Nome não pode estar vazio!")

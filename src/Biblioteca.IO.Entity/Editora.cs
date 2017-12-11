@@ -19,14 +19,28 @@ namespace Biblioteca.IO.Entity
             Nome = nome;
         }
 
-        public Editora(DateTime dataCadastro, string nome)
+        private Editora()
         {
-            DataCadastro = dataCadastro;
-            Nome = nome;
+
         }
 
         #endregion
         //pronto
+
+        #region Factory
+
+        public static class EditoraFactory
+        {
+            public static Editora Criar(int id)
+            {
+                var editora = new Editora();
+                editora.Id = id;
+                return editora;
+            }
+
+        }
+
+        #endregion
 
         public override bool Valido()
         {

@@ -17,14 +17,29 @@ namespace Biblioteca.IO.Entity
             Nome = nome;
         }
 
-        public Assunto(DateTime dataCadastro, string nome)
+        private Assunto()
         {
-            DataCadastro = dataCadastro;
-            Nome = nome;
+
         }
 
         #endregion
         //pronto
+
+        #region Factory
+
+        public static class AssuntoFactory
+        {
+            public static Assunto Criar(int id)
+            {
+                var assunto = new Assunto();
+                assunto.Id = id;
+                return assunto;
+            }
+
+        }
+
+        #endregion
+
         public override bool Valido()
         {
             Validacao();

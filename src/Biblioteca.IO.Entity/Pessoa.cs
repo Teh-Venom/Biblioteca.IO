@@ -21,80 +21,23 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
-        public Pessoa(int id, DateTime dataCadastro ,string nome, string rg, string cpf, List<Telefone> telefones, Endereco endereco)
+        public Pessoa(int id, DateTime dataCadastro ,string nome, string rg, string cpf, List<int> idTelefones, int idEndereco)
         {
             Id = id;
             DataCadastro = dataCadastro;
             Nome = nome;
             Rg = rg;
             Cpf = cpf;
-            Telefones = telefones;
-            Endereco = endereco;
+            foreach (var x in idTelefones)
+            {
+                Telefones.Add(Telefone.TelefoneFactory.Criar(x));
+            }
+            Endereco = Endereco.EnderecoFactory.Criar(idEndereco);
         }
 
-        public Pessoa(DateTime dataCadastro, string nome, string rg, string cpf, List<Telefone> telefones, Endereco endereco)
+        private Pessoa()
         {
-            DataCadastro = dataCadastro;
-            Nome = nome;
-            Rg = rg;
-            Cpf = cpf;
-            Telefones = telefones;
-            Endereco = endereco;
-        }
 
-        public Pessoa(int id, DateTime dataCadastro, string nome, string rg, string cpf, List<Telefone> telefones)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Nome = nome;
-            Rg = rg;
-            Cpf = cpf;
-            Telefones = telefones;
-        }
-
-        public Pessoa(DateTime dataCadastro, string nome, string rg, string cpf, List<Telefone> telefones)
-        {
-            DataCadastro = dataCadastro;
-            Nome = nome;
-            Rg = rg;
-            Cpf = cpf;
-            Telefones = telefones;
-        }
-
-        public Pessoa(int id, DateTime dataCadastro, string nome, string rg, string cpf, Endereco endereco)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Nome = nome;
-            Rg = rg;
-            Cpf = cpf;
-            Endereco = endereco;
-        }
-
-        public Pessoa(DateTime dataCadastro, string nome, string rg, string cpf, Endereco endereco)
-        {
-            DataCadastro = dataCadastro;
-            Nome = nome;
-            Rg = rg;
-            Cpf = cpf;
-            Endereco = endereco;
-        }
-
-        public Pessoa(int id, DateTime dataCadastro, string nome, string rg, string cpf)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Nome = nome;
-            Rg = rg;
-            Cpf = cpf;
-        }
-
-        public Pessoa(DateTime dataCadastro, string nome, string rg, string cpf)
-        {
-            DataCadastro = dataCadastro;
-            Nome = nome;
-            Rg = rg;
-            Cpf = cpf;
         }
 
         #endregion
@@ -123,8 +66,36 @@ namespace Biblioteca.IO.Entity
             Endereco = endereco;
         }
 
+        public void CadastrarPessoa(string nome, string rg, string cpf)
+        {
+            Nome = nome;
+            Rg = rg;
+            Cpf = cpf;  
+        }
+
         #endregion
         //terminado métodos para classe entity
+
+        #region Factory
+
+        public static class PessoaFactory
+        {
+            public static Pessoa Criar(int id)
+            {
+                var pessoa = new Pessoa();
+                pessoa.Id = id;
+                return pessoa;
+            }
+
+            public static Pessoa Criar(string nome)
+            {
+                var pessoa = new Pessoa();
+                pessoa.Nome = nome;
+                return pessoa;
+            }
+        }
+
+        #endregion
 
         public override bool Valido()
         {

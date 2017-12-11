@@ -16,12 +16,12 @@ namespace Biblioteca.IO.Repository
             throw new NotImplementedException();
         }
 
-        public bool VerificarUsuarioExistente(string email)
+        public bool VerificarUsuarioExistente(Usuario usuario)
         {
             throw new NotImplementedException();
         }
 
-        public bool VerificarUsuarioDesativado(int id)
+        public bool VerificarUsuarioDesativado(Usuario usuario)
         {
             throw new NotImplementedException();
         }
@@ -31,17 +31,17 @@ namespace Biblioteca.IO.Repository
             throw new NotImplementedException();
         }
 
-        public void AlterarSenha(Usuario obj)
+        public void AlterarSenha(Usuario usuario)
         {
             throw new NotImplementedException();
         }
 
-        public void DesativarUsuario(int id)
+        public void DesativarUsuario(Usuario usuario)
         {
             throw new NotImplementedException();
         }
 
-        public void CadastrarUsuario(Usuario obj)
+        public void CadastrarUsuario(Usuario usuario)
         {
             throw new NotImplementedException();
         }

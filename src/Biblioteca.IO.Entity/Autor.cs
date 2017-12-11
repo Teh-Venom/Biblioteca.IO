@@ -21,15 +21,27 @@ namespace Biblioteca.IO.Entity
             Email = email;
         }
 
-        public Autor(DateTime dataCadastro, string nome, string email)
+        private Autor()
         {
-            DataCadastro = dataCadastro;
-            Nome = nome;
-            Email = email;
+
         }
 
         #endregion
         //pronto
+
+        #region Factory
+
+        public static class AutorFactory
+        {
+            public static Autor Criar(int id)
+            {
+                var autor = new Autor();
+                autor.Id = id;
+                return autor;
+            }
+        }
+
+        #endregion
 
         public override bool Valido()
         {

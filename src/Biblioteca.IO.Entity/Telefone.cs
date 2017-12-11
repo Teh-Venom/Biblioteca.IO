@@ -14,36 +14,18 @@ namespace Biblioteca.IO.Entity
         public TipoTelefone TipoTelefone { get; private set; }
 
         #region Construtores
-        public Telefone(DateTime dataCadastro, int idPessoa, string numero, TipoTelefone tipoTelefone)
-        {
-            DataCadastro = dataCadastro;
-            IdPessoa = idPessoa;
-            Numero = numero;
-            TipoTelefone = tipoTelefone;
-        }
-
-        public Telefone(int id, DateTime dataCadastro, int idPessoa, string numero, TipoTelefone tipoTelefone)
+        public Telefone(int id, DateTime dataCadastro, int idPessoa, string numero, int idTipoTelefone)
         {
             Id = id;
             DataCadastro = dataCadastro;
             IdPessoa = idPessoa;
             Numero = numero;
-            TipoTelefone = tipoTelefone;
+            TipoTelefone = TipoTelefone.TipoTelefoneFactory.Criar(idTipoTelefone);
         }
 
-        public Telefone(DateTime dataCadastro, int idPessoa, string numero)
+        private Telefone()
         {
-            DataCadastro = dataCadastro;
-            IdPessoa = idPessoa;
-            Numero = numero;
-        }
 
-        public Telefone(int id, DateTime dataCadastro, int idPessoa, string numero)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            IdPessoa = idPessoa;
-            Numero = numero;
         }
 
 
@@ -59,9 +41,30 @@ namespace Biblioteca.IO.Entity
             TipoTelefone = tipoTelefone;
         }
 
+        public void CadastrarTelefone(int idPessoa, string numero, int idTipoTelefone)
+        {
+            IdPessoa = idPessoa;
+            Numero = numero;
+            TipoTelefone = TipoTelefone.TipoTelefoneFactory.Criar(idTipoTelefone);
+        }
 
         #endregion
         //terminado métodos para classe entity 
+
+        #region Factory
+
+        public static class TelefoneFactory
+        {
+            public static Telefone Criar(int id)
+            {
+                var telefone = new Telefone();
+                telefone.Id = id;
+                return telefone;
+            }
+
+        }
+
+        #endregion
 
         public override bool Valido()
         {

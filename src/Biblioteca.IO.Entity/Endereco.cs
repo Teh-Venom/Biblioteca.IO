@@ -19,18 +19,7 @@ namespace Biblioteca.IO.Entity
 
 
         #region Construtores
-        public Endereco(DateTime dataCadastro, string logradouro, string bairro, string cep, int numero, string complemento, Cidade cidade)
-        {
-            DataCadastro = dataCadastro;
-            Logradouro = logradouro;
-            Bairro = bairro;
-            Cep = cep;
-            Numero = numero;
-            Complemento = complemento;
-            Cidade = cidade;
-        }
-
-        public Endereco(int id, DateTime dataCadastro, string logradouro, string bairro, string cep, int numero, string complemento, Cidade cidade)
+        public Endereco(int id, DateTime dataCadastro, string logradouro, string bairro, string cep, int numero, string complemento, int idCidade)
         {
             Id = id;
             DataCadastro = dataCadastro;
@@ -39,28 +28,11 @@ namespace Biblioteca.IO.Entity
             Cep = cep;
             Numero = numero;
             Complemento = complemento;
-            Cidade = cidade;
+            Cidade = Cidade.CidadeFactory.Criar(idCidade);
         }
-
-        public Endereco(DateTime dataCadastro, string logradouro, string bairro, string cep, int numero, string complemento)
+        private Endereco()
         {
-            DataCadastro = dataCadastro;
-            Logradouro = logradouro;
-            Bairro = bairro;
-            Cep = cep;
-            Numero = numero;
-            Complemento = complemento;
-        }
 
-        public Endereco(int id, DateTime dataCadastro, string logradouro, string bairro, string cep, int numero, string complemento)
-        {
-            Id = id;
-            DataCadastro = dataCadastro;
-            Logradouro = logradouro;
-            Bairro = bairro;
-            Cep = cep;
-            Numero = numero;
-            Complemento = complemento;
         }
 
         #endregion
@@ -77,6 +49,20 @@ namespace Biblioteca.IO.Entity
 
         #endregion
         //terminado métodos classe entity
+
+        #region Factory
+
+        public static class EnderecoFactory
+        {
+            public static Endereco Criar(int id)
+            {
+                var endereco = new Endereco();
+                endereco.Id = id;
+                return endereco;
+            }
+        }
+
+        #endregion
 
         public override bool Valido()
         {

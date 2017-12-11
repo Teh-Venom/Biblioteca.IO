@@ -9,12 +9,6 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
-        public TipoTelefone(DateTime dataCadastro, string nome)
-        {
-            DataCadastro = dataCadastro;
-            Nome = nome;
-        }
-
         public TipoTelefone(int id, DateTime dataCadastro, string nome)
         {
             Id = id;
@@ -22,9 +16,33 @@ namespace Biblioteca.IO.Entity
             Nome = nome;
         }
 
+        private TipoTelefone()
+        {
+
+        }
+
         #endregion
         //pronto
+        #region Factory
 
+        public static class TipoTelefoneFactory
+        {
+            public static TipoTelefone Criar(int id)
+            {
+                var tipoTelefone = new TipoTelefone();
+                tipoTelefone.Id = id;
+                return tipoTelefone;
+            }
+
+            public static TipoTelefone Criar(string nome)
+            {
+                var tipoTelefone = new TipoTelefone();
+                tipoTelefone.Nome = nome;
+                return tipoTelefone;
+            }
+        }
+
+        #endregion
         //não há metodos para classe entity
 
         public override bool Valido()

@@ -13,13 +13,6 @@ namespace Biblioteca.IO.Entity
 
         #region Construtores
 
-        public Estado(DateTime dataCadastro, string sigla, string nome)
-        {
-            DataCadastro = dataCadastro;
-            Sigla = sigla;
-            Nome = nome;
-        }
-
         public Estado(int id, DateTime dataCadastro, string sigla, string nome)
         {
             Id = id;
@@ -28,7 +21,7 @@ namespace Biblioteca.IO.Entity
             Nome = nome;
         }
 
-        public Estado()
+        private Estado()
         {
 
         }
